@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/style/styles.css" rel="stylesheet" />
+
+    <title>EcoAlgaida - Iniciar sesión</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-pequeno">
+        <div>
+          <a
+            class="iconos"
+            href="https://facebook.com/ecoalgaida"
+            target="_blank"
+            title="Enlace a Facebook"
+          >
+            <img
+              src="/imgs/fb.svg"
+              alt="Icono Facebook"
+              title="Enlace a Facebook"
+            />
+          </a>
+          <a
+            class="iconos"
+            href="https://twitter.com/ecoalgaida"
+            target="_blank"
+            title="Enlace a Twitter"
+          >
+            <img
+              src="/imgs/tw.svg"
+              alt="Icono Twitter"
+              title="Enlace a Twitter"
+            />
+          </a>
+          <a
+            class="iconos"
+            href="https://instagram.com/ecoalgaida"
+            target="_blank"
+            title="Enlace a Instagram"
+          >
+            <img
+              src="/imgs/ig.svg"
+              alt="Icono Instagram"
+              title="Enlace a Instagram"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="#"
+            class="link-nav-peq active"
+            title="Acceso a iniciar sesión"
+            >Iniciar sesión</a
+          >
+          <a class="iconos" href="#" title="Enlace a la cesta">
+            <img
+              src="/imgs/cesta.svg"
+              alt="Icono Cesta"
+              title="Enlace a la cesta"
+            />
+          </a>
+        </div>
+      </nav>
+
+      <div class="navbar-movil">
+        <a href="index.html" title="EcoAlgaida" class="logo">
+          <img src="imgs/logo.png" alt="EcoAlgaida" />
+        </a>
+        <nav class="menu" id="menu">
+          <ul>
+            <li>
+              <a href="index.html" title="Inicio">Inicio</a>
+            </li>
+            <li>
+              <a href="productos.html" title="Productos">Productos</a>
+            </li>
+            <li>
+              <a href="socios.html" title="Socios">Socios</a>
+            </li>
+            <li>
+              <a href="contacto.html" title="Contacto">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <span class="toogle-boton" id="toogle-boton" onclick="abrirMenu()"
+          >☰</span
+        >
+        <span class="close-boton" id="close-boton" onclick="cerrarMenu()"
+          >⨯</span
+        >
+      </div>
+      <div class="navbar-escritorio">
+        <a href="index.html" title="EcoAlgaida" class="logo">
+          <img src="imgs/logo.png" alt="EcoAlgaida" />
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" title="Inicio">Inicio</a>
+            </li>
+            <li>
+              <a href="productos.html" title="Productos">Productos</a>
+            </li>
+            <li>
+              <a href="socios.html" title="Socios">Socios</a>
+            </li>
+            <li>
+              <a href="contacto.html" title="Contacto">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="contenedor contenedor-carrito">
+        <div class="carrito-lista">
+          <div class="producto">
+            <figure>
+              <img src="imgs/productos/lechuga.webp" alt="Lechuga" title="Lechuga" />
+            </figure>
+            <div class="info-producto">
+              <h3>Lechuga</h3>
+              <p>2.35€</p>
+              
+            </div>
+            <button type="button" >Borrar</button>
+          </div>
+          <div class="producto">
+            <figure>
+              <img src="imgs/productos/brocoli.webp" alt="Brócoli" title="Brócoli" />
+            </figure>
+            <div class="info-producto">
+              <h3>Brócoli</h3>
+              <p>2.27€</p>
+            </div>
+            <button type="button" >Borrar</button>
+          </div>
+        </div>
+        <div class="carrito-precio">
+          <h2>Precio total</h2>
+          <h3>4.62€</h3>
+          <button>Comprar</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer contenedor">
+        <div class="contacto-footer">
+          <figure>
+            <img
+              src="imgs/logo.png"
+              class="logo-footer"
+              alt="Logo EcoAlgaida"
+              title="EcoAlgaida"
+            />
+          </figure>
+          <ul>
+            <li>
+              <a
+                href="https://goo.gl/maps/Vir2WPLjP5sRMVEw9"
+                title="Enlance a Google Maps"
+                rel="noreferrer"
+                ><img
+                  src="imgs/mapa.svg"
+                  class="iconos-footer"
+                  alt="Icono teléfono"
+                />C/ Mayor 123, 07210 Algaida</a
+              >
+            </li>
+            <li>
+              <a href="tel:+3466699966" title="Télefono">
+                <img
+                  src="imgs/tlf.svg"
+                  class="iconos-footer"
+                  alt="Icono teléfono"
+                />666 999 666</a
+              >
+            </li>
+            <li>
+              <a href="tel:+34999666999" title="Télefono Alternativo">
+                <img
+                  src="imgs/tlf.svg"
+                  class="iconos-footer"
+                  alt="Icono teléfono"
+                />
+                999 666 999</a
+              >
+            </li>
+            <li>
+              <a href="mailto:info@ecoalgaida.com" title="Correo electrónico">
+                <img
+                  src="imgs/correo.svg"
+                  class="iconos-footer"
+                  alt="Icono correo"
+                />
+                info@ecoalgaida.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3><a href="index.html" title="Inicio">Inicio</a></h3>
+          <ul>
+            <li>
+              <a href="index.html#mision" title="Misión"> Misión </a>
+            </li>
+            <li>
+              <a href="index.html#valores" title="Valores"> Valores </a>
+            </li>
+            <li>
+              <a href="index.html#historia" title="Historia"> Historia </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3><a href="productos.html" title="Productos">Productos</a></h3>
+          <ul>
+            <li>
+              <a href="catalogo.html#catalogo" title="Catálogo"> Catálogo </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3><a href="socios.html" title="Socios">Socios</a></h3>
+          <ul>
+            <li>
+              <a href="socios.html#afiliacion" title="Proceso afiliación">
+                Proceso afiliación
+              </a>
+            </li>
+            <li>
+              <a
+                href="socios.html#responsabilidad"
+                title="Responsabilidad de los socios"
+              >
+                Responsabilidad de los socios
+              </a>
+            </li>
+            <li>
+              <a href="socios.html#beneficios" title="Beneficios de ser socio">
+                Beneficios de ser socio
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3><a href="contacto.html" title="Contacto">Contacto</a></h3>
+          <ul>
+            <li>
+              <a href="contacto.html#formulario" title="Formulario de contacto"
+                >Formulario de contacto</a
+              >
+            </li>
+            <li>
+              <a href="contacto.html#mapa" title="Dirección y ubicación">
+                Dirección y ubicación</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>
+          © Copyright 2023 EcoAlgaida – Todos los derechos reservados.
+        </span>
+      </div>
+    </footer>
+    <!-- llamamos el script que controla el desplegar y cerrar el menu movil -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

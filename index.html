@@ -67,15 +67,16 @@
           </a>
         </div>
       </nav>
-
       <div class="navbar-movil">
         <a href="index.html" title="EcoAlgaida" class="logo">
           <img src="imgs/logo.png" alt="EcoAlgaida" />
         </a>
+        <input type="checkbox" id="interruptor-menu" class="interruptor-menu" />
+        <label for="interruptor-menu">☰</label>
         <nav class="menu" id="menu">
           <ul>
             <li>
-              <a class="active" href="index.html" title="Inicio">Inicio</a>
+              <a href="/" title="Inicio">Inicio</a>
             </li>
             <li>
               <a href="productos.html" title="Productos">Productos</a>
@@ -88,13 +89,8 @@
             </li>
           </ul>
         </nav>
-        <span class="toogle-boton" id="toogle-boton" onclick="abrirMenu()"
-          >☰</span
-        >
-        <span class="close-boton" id="close-boton" onclick="cerrarMenu()"
-          >⨯</span
-        >
       </div>
+      
       <div class="navbar-escritorio">
         <a href="index.html" title="EcoAlgaida" class="logo">
           <img src="imgs/logo.png" alt="EcoAlgaida" />
@@ -315,7 +311,6 @@
         </span>
       </div>
     </footer>
-    <!-- llamamos el script que controla el desplegar y cerrar el menu movil -->
-    <script src="js/main.js"></script>
+
   </body>
 </html>

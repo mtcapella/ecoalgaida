@@ -155,21 +155,33 @@ header {
   max-height: 100px;
 }
 
+a.active {
+  /* color de la página activa */
+  text-decoration-line: underline;
+}
+
 /* menu desplegable */
 
+.interruptor-menu {
+  display: none;
+}
+
 .menu {
-  height: 20%; /* se establece la altura del menu */
-  width: 0; /* inicialmente el ancho es cero y al activar el menu cambia su tamaño */
-  position: absolute; /* Posiciona el menu de forma absoluta en relacion al contenedor padre */
-  z-index: 1; /* establece el inice de apliamento del menu */
-  top: 14rem; /* distancia entre la parte superior en referencia con el contenedor padre*/
-  background-color: inherit; /* hereda el color de fondo el contenedor padre */
-  overflow-x: hidden; /* oculta el scroll horizontal */
-  transition: 0.5s linear; /* define una animacion de transicion */
+  height: 30%;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 14rem;
+  background-color: inherit;
+  overflow-x: hidden;
+  transition: 0.5s linear;
+}
+
+#interruptor-menu:checked ~ .menu {
+  width: 100%;
 }
 
 .menu ul {
-  /* quito padding definido por defecto */
   padding: 0;
 }
 
@@ -189,25 +201,7 @@ header {
 
 .menu a:hover,
 .menu a:focus {
-  opacity: 0.7; /* se pone una leve tranparencia para generar un efecto hover al pasar el raton por encima */
-}
-
-a.active {
-  /* color de la página activa */
-  text-decoration-line: underline;
-}
-
-.toogle-boton {
-  font-size: 2rem;
-  cursor: pointer;
-  width: 30px;
-}
-
-.close-boton {
-  font-size: 2rem;
-  cursor: pointer;
-  width: 30px;
-  display: none;
+  opacity: 0.7;
 }
 
 /* aqui configuramos las secciones */

@@ -23,23 +23,26 @@ body {
   font-family: "Roboto";
 }
 
+/* Estilos del contenedor */
+
 .contenedor {
   max-width: 1140px;
   margin: 0 auto;
 }
 
 .contenedor-minimo {
- padding: 2rem;
+  padding: 2rem;
 }
 
 /* estilos del header */
 header {
   /* fuente que se usara en todo el header */
   font-size: 22px;
-  font-family: "Roboto";
-  font-weight: bold; /* 900 es negrita */
+  font-family: "Saira Extra Condensed";
+  font-weight: 900; /* 900 es negrita */
 }
 
+/* estilos del navbar pequeño que comtiene los iconos de las rrss */
 .navbar-pequeno {
   background-color: var(--color-primario);
   color: var(--color-fuente-claro);
@@ -49,23 +52,22 @@ header {
 
 /* Estilo de los iconoes RRSS */
 .iconos {
-  display: inline-block;
-  background: var(--color-fuente-oscuro);
+  display: inline-block; /* los elementos se comportan en bloque y se visualizaran en linea con los otros elementos */
+  background: var(--color-fuente-oscuro); /* se pone un fondo a los iconos */
   height: 1.75rem;
   width: 1.75rem;
-  border-radius: 1rem;
+  border-radius: 1rem; /* el fondo se rendondea para que parezca un circulo */
   text-align: center;
   line-height: 1.75rem;
   margin: 0.3rem;
+  color: var(--color-fuente-claro); /* Es para que el texto sea blanco y no de errores el verificador AA ya que no hay texto pero el verificador lo da como falso positivo */
 }
 
 /* estilos iconos del footer */
-
 .iconos-footer {
-  display: inline-block;
+  display: inline-block; /* los elementos se comportan en bloque y se visualizaran en linea con los otros elementos */
   height: 1.75rem;
   width: 1.75rem;
-  border-radius: 1rem;
   text-align: center;
   line-height: 1.75rem;
   margin: 0.3rem;
@@ -83,7 +85,6 @@ header {
   max-width: 1rem;
   max-height: 1rem;
 }
-
 /* aplicamos un suave efecto hover sobre los enlaces de las redes sociales */
 .iconos:hover {
   opacity: 0.7;
@@ -107,22 +108,22 @@ header {
 .navbar-movil {
   background-color: var(--color-secundario);
   color: var(--color-fuente-oscuro);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: flex; /* los elementos se mostraran de forma flexible */
+  justify-content: space-around; /* los elementos se repartirán el espacio sobrante de su contenedor de manera equitativa */
+  align-items: center; /* los elmentos se alinean de forma centrar horizontalmente */
   padding: 1rem 0rem 1rem 0rem;
 }
 
-/* Estilos del nabar escritorio */
-
+/* Estilos del navbar escritorio */
 .navbar-escritorio {
-  display: none;
+  display: none; /* por defecto esta oculto hasta que el media query lo "active" */
   background-color: var(--color-secundario);
   color: var(--color-fuente-oscuro);
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-evenly; /*  los elementos se repartirán el espacio sobrante de su contenedor de igual manera a todos sus costados */
+  align-items: center; /* los elmentos se alinean de forma centrar horizontalmente */
   padding: 1rem 0rem 1rem 0rem;
 }
+
 /* quitamos los puntos de la lista no ordenada */
 .navbar-escritorio ul {
   list-style: none;
@@ -135,84 +136,82 @@ header {
   margin-right: 1rem; /* añadimos un margen de 1rem a la derecha para que no se solapen */
 }
 
-/* Estilos Menu escritorio */
-
+/* Estilos del menú de escritorio */
 .navbar-escritorio a {
-  color: var(--color-fuente-oscuro);
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  color: var(--color-fuente-oscuro); /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  transition: all 0.3s ease-in-out; /* Transición suave de propiedades */
 }
 
 .navbar-escritorio a:hover,
 .navbar-escritorio a:focus {
-  opacity: 0.7; /* se pone una leve tranparencia para generar un efecto hover al pasar el raton por encima */
+  opacity: 0.7;  /* leve transparencia al pasar el raton por encima o al tener el foco sobre el */
 }
 
-/* logo responsive */
-
-.logo img {
-  width: auto;
-  max-height: 100px;
-}
-
+/* Estilo del enlace activo */
 a.active {
-  /* color de la página activa */
-  text-decoration-line: underline;
+  text-decoration-line: underline; /* Subrayado que indica el enlace activo */
+}
+
+/* Estilo del logotipo responsive */
+.logo img {
+  width: auto; /* Ancho automático para adaptarse al contenedor */
+  max-height: 100px; /* Altura máxima de 100 píxeles */
 }
 
 /* menu desplegable */
 
 .interruptor-menu {
-  display: none;
+  display: none; /* Oculta el interruptor del menú */
 }
 
 .menu {
-  height: 30%;
-  width: 0;
-  position: absolute;
-  z-index: 1;
-  top: 14rem;
-  background-color: inherit;
-  overflow-x: hidden;
-  transition: 0.5s linear;
+  height: 30%; /* Altura del menú */
+  width: 0; /* Anchura inicialmente en 0 para ocultarlo */
+  position: absolute; /* Posicionamiento absoluto */
+  z-index: 1; /* se pone en menú en una capa superior para que este encima de los demás elementos */
+  top: 14rem; /* Posicionamiento vertical desde la parte superior del contenedor padre*/
+  background-color: inherit; /* Color de fondo heredado del contenedor padre */
+  overflow-x: hidden; /* se elimina el desbordamiento horizontal */
+  transition: 0.5s linear; /* Transición animada de 0.5 segundos */
 }
 
 #interruptor-menu:checked ~ .menu {
-  width: 100%;
+  width: 100%; /* al activar el checkbox el ancho cambia al 100% para hacerse visible */
 }
 
 .menu ul {
-  padding: 0;
+  padding: 0; /* Elimina el relleno del elemento de lista no ordenada */
 }
 
 .menu li {
-  font-size: 19px;
-  font-weight: 900;
-  padding: 1rem;
-  list-style: none;
-  text-align: center;
+  font-size: 19px; 
+  font-weight: 900; 
+  padding: 1rem; 
+  list-style: none; /* se quitan las viñetas de lista */
+  text-align: center; /* se centra centrada del texto */
 }
 
 .menu a {
-  color: var(--color-fuente-oscuro);
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  color: var(--color-fuente-oscuro); /* Color del texto del enlace */
+  text-decoration: none; /* Sin subrayado en el enlace */
+  transition: all 0.3s ease-in-out; /* Transición suave de propiedades */
 }
 
 .menu a:hover,
 .menu a:focus {
-  opacity: 0.7;
+  opacity: 0.7; 
 }
 
+
 /* aqui configuramos las secciones */
-
-
 
 .grid-2columnas {
   display: grid; /* disposicion en rejilla */
   grid-template-columns: 1fr; /* se define una unica columna */
   grid-gap: 2rem; /* se establece el espaciado entre los elementos de la rejilla  */
 }
+
 /* clase que establecera el color de fondo de la seccion */
 
 .fondo-verde {
@@ -243,10 +242,6 @@ h2 {
   font-size: 33px;
 }
 
-h2 {
-  font-family: "Roboto";
-  font-size: 25px;
-}
 
 p {
   font-family: "roboto";
@@ -382,7 +377,8 @@ button {
   border-radius: 2rem;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   opacity: 0.7;
 }
 
@@ -391,15 +387,14 @@ input {
   height: 30px;
 }
 
- input[type="checkbox"] {
-  
+input[type="checkbox"] {
   width: auto;
   padding: 0;
-
 }
 
-input:focus { /* los input que tegan el foco tendra el borde azul */
-  border-color: var(--color-secundario); 
+input:focus {
+  /* los input que tegan el foco tendra el borde azul */
+  border-color: var(--color-secundario);
 }
 
 input[type="checkbox"]:checked::before {
@@ -426,32 +421,23 @@ textarea {
   text-align: center;
   max-width: 280px;
   transform: scale(1);
-  transition: all 0.3s;  
-
+  transition: all 0.3s;
 }
 
-
-
-.contenedor-producto figure:hover
-{
-
+.contenedor-producto figure:hover {
   transform: scale(1.1);
-
 }
 
 .contenedor-producto figcaption {
-font-family: "Roboto";
-font-size: 25px;
-font-weight: 400;
-
+  font-family: "Roboto";
+  font-size: 25px;
+  font-weight: 400;
 }
 
 /* estilos página de contacto */
 
 .contacto {
-
   padding: 2rem;
-
 }
 
 .contacto div {
@@ -463,23 +449,22 @@ font-weight: 400;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 .privacidad label {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.30rem;
+  gap: 0.3rem;
 }
 
 .privacidad input[type="checkbox"] {
   vertical-align: middle;
-  margin-right: 0.5rem; 
+  margin-right: 0.5rem;
 }
 
 .privacidad a {
-  color: inherit;  
+  color: inherit;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -495,21 +480,19 @@ font-weight: 400;
   width: 50%;
 }
 
-/* Estilos carrito */
-
+/* Estilos de la página cesta */
 
 .contenedor-carrito {
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-
 }
 
 .carrito-lista {
   display: grid;
   gap: 2rem;
-width: auto;
+  width: auto;
 }
 
 .carrito-precio {
@@ -524,7 +507,6 @@ width: auto;
   align-items: center;
   border: 1px solid var(--color-fuente-oscuro);
   padding: 1rem 2rem 1rem 2rem;
-
 }
 
 .producto img {
@@ -544,11 +526,9 @@ width: auto;
   width: 150px;
 }
 
-
-
 /* media querys que controlan el modo responsive */
 
-@media (min-width: 400px) { 
+@media (min-width: 400px) {
   .contenedor-producto {
     grid-template-columns: 1fr 1fr;
   }
